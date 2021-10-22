@@ -3,13 +3,13 @@ import yaml
 import argparse
 import pandas as pd
 
-def get_params(config_path):
+def load_configurations(config_path):
     with open(config_path) as yaml_file:
         config = yaml.safe_load(yaml_file)
     return config
 
 def get_data(config_path):
-    config = get_params(config_path)
+    config = load_configurations(config_path)
     data_path = config['data_source']['s3_source']
     df = pd.read_csv(data_path)
     return df
