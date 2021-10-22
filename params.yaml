@@ -1,0 +1,5 @@
+data_source:
+  s3_source: data_given/winequality.csv
+
+load_raw_data:
+  raw_dataset_csv: data/raw/winequality.csv
